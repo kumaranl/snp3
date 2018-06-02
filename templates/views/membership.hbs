@@ -1,0 +1,127 @@
+<div class="container">
+
+  <div class="col-md-12">
+<div class="tab-content panels-faq">
+  <div class="tab-pane active" id="tab1">
+    <div class="panel-group" id="help-accordion-1">
+      <div class="panel panel-default panel-help">
+        <a href= "#whyshouldyoujoin" data-toggle="collapse" data-parent="#help-accordion-1">
+          <div class="panel-heading">
+            <h4>WHY SHOULD YOU JOIN?</h4>
+          </div>
+        </a>
+        <div id="whyshouldyoujoin" class="collapse out">
+          <div class="panel-body">
+            <p>‘Society for Development of Suryanagar’ believes that knowledge is power and the empowerment of community can be achieved by sharing and dissemination of knowledge and information. The Society believes that collective action alone is the way to assert individual rights. A complacent community that does not exercise its rights is doomed to suffer the extralegal, inept, overbearing and insolent attitude of public institutions and authorities. In the context of Suryanagar Phase 3, did you know the following:
+            </p>
+            <p>You are entitled to receive interest on your initial deposit amount on completion of 12 months from the date of your payment until the date the site was allotted to you.</P>
+            <p>The cost you paid to KHB was for a fully developed site with all amenities and it was not an advance for KHB to commence the development of the township</p>
+            <p>No site could be sold by KHB until the development is completed and completion certificate obtained from Competent Authority (LPA)</P>
+            <p>As of 01 May 2018, not a single development work has been completed by KHB in SNP3.</p>
+            <p>Possession of properties is to be handed over only on completion of developmental works as per law.</p>
+            <p>KHB does not have the final approval for the township nor has obtained Occupancy Certificate for houses from the competent authority even till todate.</P>
+             <p>KHB has neither any means nor ways to supply water for the foreseeable future.</p>
+             <p>You are NOT liable to pay maintenance charges and property tax simultaneously but are forced to do so.</p>
+            <p> Maintenance Charges can be levied only on completion of developmental works but KHB levies the same from the date you take possession.</p>
+            <p>KHB has to furnish you with E-Khata (form 9) along with the Conditional Sale Deed, but it leaves this responsibility to you.</P>
+            <p>These are only some illustrations of shortcomings and there are many more such issues that need to be tackled. The Society for Development of Suryanagar has worked to identify most of the problem areas and has evolved an action plan to enforce our rights and dues. The actions involve multi-pronged strategies ranging from persuasion to prosecution. However, our action will bear fruit only if YOU join us in our endeavor. After all, unity is strength. We will need a lot of your moral support, some of your physical presence and a tiny bit of your money!</P>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+<div class="tab-content panels-faq">
+<div class="tab-pane active" id="tab1">
+  <div class="panel-group" id="help-accordion-1">
+    <div class="panel panel-default panel-help">
+      <a href= "#whocanjoin" data-toggle="collapse" data-parent="#help-accordion-1">
+        <div class="panel-heading">
+              <h4> WHO CAN JOIN? </h4>
+        </div>
+      </a>
+      <div id="whocanjoin" class="collapse out">
+        <div class="panel-body">
+            <p>Membership to the Society is open to property owners in SNP3 township and general public who have any kind of stake in the development of the township. The Society earnestly looks forward to active participation from its members and contribution through ideas, efforts, networking, technology, knowledge building and plethora of other areas. While most efforts of society will require a lot of your moral support and some of your physical presence, there is a need for very small token contribution, payable only if you are convinced and at your own convenience. The Society seeks a token one-time membership fee of Rs 300/- per member. The Society will display in real time, the expenditures and the financial status on this site. It will be left for members to decide the financial arrangements during future times to come. The Society’s greatest strength would be in the vitality and the number of members and their participation in activities whenever called for. In return, the Society promises to make SNP3, a model township!
+          </P>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  <div class="row">
+  <div class="col-md-12">
+    {{#if memberSubmitted}}
+    <h3> New User Created</h3>
+    {{else}}
+    <form method="post">
+      <input type="hidden" name="action" value="membership">
+      <div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+        <label>Name</label>
+        <input type="text" name="name"  placeholder="(required)" class="form-control" value="{{formData.name}}">
+      </div>
+      <div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="(required)" class="form-control" value="{{formData.email}}">
+      </div>
+      <div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="(required)" class="form-control" value="{{formData.password}}">
+      </div>
+      <!--<div class="form-group">
+        <label>Property Type</label>
+        <input type="text" name="propertytype" placeholder="(optional)" class="form-control" value="{{formData.propertytype}}">
+      </div>
+-->
+    <div class="form-group">
+      <label for="sel2">Suryanagar Block</label>
+      <select class="form-control" name="block" id="block" class="form-control" >
+        <option value = "B1">Block 1</option>
+        <option value = "B2">Block 2</option>
+        <option value = "B3">Block 3</option>
+        <option value = "B4">Block 4</option>
+        <option value = "B5">Block 5</option>
+        <option value = "B6">Block 6</option>
+        <option value = "B7">Block 7</option>
+        <option value = "B8">Block 8</option>
+        <option value = "B9">Block 9</option>
+      </select>
+    </div>
+      <div class="form-group">
+        <label for="sel1">Property Type</label>
+        <select class="form-control" name="propertytype" id="propertytype" class="form-control" >
+          <option value = "site">Site</option>
+          <option value = "house">House</option>
+          <option value = "commercialspace">Commerial Space</option>
+          <option value = "tenant">Tenant</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Property Number</label>
+        <input type="text" name="propertynumber" placeholder="(optional)" class="form-control" value="{{formData.propertynumber}}">
+      </div>
+      <div class="form-group">
+        <label>Present address</label>
+        <input type="text" name="presentaddress" placeholder="(optional)" class="form-control" value="{{formData.presentaddress}}">
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="text" name="mobilenumber" placeholder="(required)" class="form-control" value="{{formData.mobilenumber}}">
+      </div>
+      <div class="form-group">
+        <label>Interest</label>
+        <input type="text" name="interest" placeholder="(optional)" class="form-control" value="{{formData.interest}}">
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    		{{/if}}
+  </div>
+  </div>
+</div>

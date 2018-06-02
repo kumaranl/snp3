@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class = "row">
+
+    <div class="col-md-3">
+      <a href = "{{aboutusdetUrl 'MoA'}}" ><img src="/images/memorandum.png" width="250">Memorandum of Association</a><BR>
+      <a href = "{{aboutusdetUrl 'byerules'}}" ><img src="/images/Byelaws.png" width="250">Bye Laws</a>
+    </div>
+    <div class="col-md-9">
+      {{# each aboutusdet }}
+        <h4>{{title}}</h4><br>
+          <p>{{{ splitDesc description}}}</p>
+      {{/each}}
+    </div>
+  </div>
+</div>
